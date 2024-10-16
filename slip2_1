@@ -1,0 +1,22 @@
+//calculate BMI
+
+public class cal_bmi 
+{
+
+	public static void main(String[] args) 
+	{
+		
+     String fname=args[0];
+     String lname=args[1];
+     int w=Integer.parseInt(args[2]);
+     int h=Integer.parseInt(args[3]);
+     int BMI=w/(h*h);
+     System.out.println("first name="+fname);
+     System.out.println("last name="+lname);
+     System.out.println("wight="+w);
+     System.out.println("height="+h);
+     System.out.println("calculated bmi="+BMI);
+	}
+
+}
+
