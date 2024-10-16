@@ -1,0 +1,25 @@
+// Write a program to find the Square of given number using function interface.
+
+//Write a program to find the Square of given number using function interface.
+
+interface square
+{
+	void find(int n);
+}
+public class slip16 implements square
+{
+
+	public void find(int n)
+	{
+		int ans=n*n*n;
+		System.out.println("square="+ans);
+	}
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		slip16 ob=new slip16();
+		ob.find(2);
+
+	}
+
+}
