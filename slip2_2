@@ -1,0 +1,64 @@
+//cricket sort
+
+import java.util.*;
+public class cricket_sort 
+{
+
+	String name;
+	int noi,non,trun;
+	float bavg;
+	void accept()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter name,noi,non,total run");
+		name=sc.next();
+		noi=sc.nextInt();
+		non=sc.nextInt();
+		trun=sc.nextInt();
+		bavg=avg(trun,noi,non);
+	}
+	static float avg(int trun,int noi,int non)
+	{
+		return trun/(noi-non);
+	}
+	static void sort(cricket_sort ob[],int n)
+	{
+		int pass,i;
+		for(pass=1;pass<n;pass++)
+		{
+			for(i=0;i<n-pass;i++)
+			{
+				if(ob[i].bavg<ob[i+1].bavg)
+				{
+					cricket_sort t=ob[i];
+					ob[i]=ob[i+1];
+					ob[i+1]=t;
+				}
+			}
+		}
+		for(i=0;i<n;i++)
+		{
+			System.out.println("player name="+ob[i].name);
+			System.out.println("no of innings="+ob[i].noi);
+			System.out.println("no of notout="+ob[i].non);
+			System.out.println("total run="+ob[i].trun);
+			System.out.println("bat average="+ob[i].bavg);
+		}
+	}
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter limit::");
+		int n=sc.nextInt();
+		cricket_sort ob[]=new cricket_sort[n];
+		System.out.println("enter n player info::");
+		for(int i=0;i<n;i++)
+		{
+			ob[i]=new cricket_sort();
+			ob[i].accept();
+		}
+		sort(ob,n);
+
+	}
+
+}
