@@ -1,0 +1,38 @@
+// Write a program to accept the username and password from user if username and password are 
+//not same then raise "Invalid Password" with appropriate msg.
+
+// Write a program to accept the username and password from user if username and password are 
+//not same then raise "Invalid Password" with appropriate msg
+
+import java.util.*;
+class InvalidUserPass extends Exception
+{
+	public String toString()
+	{
+		return "invalid user or pass";
+	}
+}
+public class userpass
+{
+
+	public static void main(String[] args) 
+	{
+		try
+		{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter username and password");
+		String u=sc.next();
+		String p=sc.next();
+		if(u.equals(p))
+			System.out.println("login succesfull");
+		else
+		throw new InvalidUserPass();
+		}catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		
+
+	}
+
+}
