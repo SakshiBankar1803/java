@@ -1,0 +1,39 @@
+// Write program to define class Person with data member as Personname,Aadharno, Panno. 
+//       Accept information for 5 objects and display appropriate information (use this keyword).
+import java.util.*;
+public class person
+{
+	String pname;
+	int ano,pno;
+	person(String pname,int ano,int pno)
+	{
+		this.pname=pname;
+		this.ano=ano;
+		this.pno=pno;
+	}
+	void disp()
+	{
+		System.out.println("person name="+pname);
+		System.out.println("addhar np="+ano);
+		System.out.println("pan no="+pno);
+	}
+
+	public static void main(String[] args)
+	{
+	  Scanner sc=new Scanner(System.in);
+	  person ob[]=new person[5];
+	  System.out.println("enter info of 5 person::");
+	  for(int i=0;i<5;i++)
+	  {
+		  System.out.println("enter person name adhar no and pan no::");
+		  String name=sc.next();
+		  int ano=sc.nextInt();
+		  int pno=sc.nextInt();
+		  ob[i]=new person(name,ano,pno);
+	  }
+	  for(int i=0;i<5;i++)
+	     ob[i].disp();
+
+	}
+
+}
