@@ -1,0 +1,52 @@
+// Write a program to create parent class College(cno, cname, caddr) and derived class  Department(dno, dname) from College. Write a necessary methods to display College details. 
+
+//Write a program to create parent class College(cno, cname, caddr) and derived class  
+//Department(dno, dname) from College. Write a necessary methods to display College details.
+
+import java.util.*;
+class college
+{
+	int cno;
+	String cname,cadd;
+	void acceptc()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter college no name adderss");
+		cno=sc.nextInt();
+		cname=sc.next();
+		cadd=sc.next();
+	}
+}
+class dept extends college
+{
+	int dno;
+	String dname;
+	void acceptd()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter dno and dname::");
+		dno=sc.nextInt();
+		dname=sc.next();
+	}
+	void disp()
+	{
+		System.out.println("collge no="+cno);
+		System.out.println("collge name="+cname);
+		System.out.println("collge adder="+cadd);
+		System.out.println("dept no="+dno);
+		System.out.println("dept name="+dname);
+	}
+}
+
+public class slip12 
+{
+
+	public static void main(String[] args) 
+	{
+		dept ob=new dept();
+		ob.acceptc();
+		ob.acceptd();
+		ob.disp();
+	}
+
+}
