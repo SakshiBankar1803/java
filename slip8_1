@@ -1,0 +1,31 @@
+//Create a class Sphere, to calculate the volume and surface area of sphere. 
+//(Hint : Surface area=4*3.14(r*r), Volume=(4/3)3.14(r*r*r))
+
+/*Create a class Sphere, to calculate the volume and surface area of sphere. 
+(Hint : Surface area=4*3.14(r*r), Volume=(4/3)3.14(r*r*r)) */
+import java.util.*;
+public class sphere 
+{
+   void volume(float r)
+   {
+	  float v=((float)4/3)*3.14f*(r*r*r);
+	 System.out.println("volume of sphere="+v); 
+	  
+   }
+   void area(float r)
+   {
+	  float a=4*3.14f*(r*r);
+	  System.out.println("area of sphere="+a);
+   }
+	public static void main(String[] args)
+	{
+		sphere ob=new sphere();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter radius::");
+		float r=sc.nextFloat();
+		ob.volume(r);
+		ob.area(r);
+
+	}
+
+}
