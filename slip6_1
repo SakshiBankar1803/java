@@ -1,0 +1,30 @@
+//Write a program to display the Employee(Empid, Empname, Empdesignation, Empsal) 
+//information using toString(). 
+
+import java.util.*;
+public class emp 
+{
+  int id,sal;
+  String name,deg;
+  void accept()
+  {
+	  Scanner sc=new Scanner(System.in);
+	  System.out.println("enter id name deg sal::");
+	  id=sc.nextInt();
+	  name=sc.next();
+	  sal=sc.nextInt();
+	  deg=sc.next();
+  }
+  public String toString()
+  {
+	  return"\nid="+id+"\n name="+name+"\n designation= "+deg+"\n salary="+sal;
+  }
+	public static void main(String[] args) 
+	{
+		emp ob=new emp();
+		ob.accept();
+		System.out.println(ob);
+
+	}
+
+}
