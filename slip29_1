@@ -1,0 +1,47 @@
+/*Write a program to create a class Customer(custno,custname,contactnumber,custaddr). 
+       Write a method to search the customer name with given contact number and display the  
+       details. */
+
+import java.util.*;
+public class slip29 
+{
+
+	int search(String contact)
+	 {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Contact Number to Search ::");
+		String  c=sc.next();
+		int flag=0;
+		if(c.equals(contact)) 
+		{
+			flag=1;
+			return flag;
+		}
+		return flag;
+	}
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Customer Number ::");
+		int cno=sc.nextInt();
+		System.out.println("Enter Customer Name ::");
+		String cname=sc.next();
+		System.out.println("Enter Customer Contact Number ::");
+		String contact=sc.next();
+		System.out.println("Enter Customer Address ::");
+		String cadd=sc.next();
+		slip29 ob = new slip29();
+		int check=ob.search(contact);
+		if(check==1) {
+			System.out.println("Cno\tCname\tContact\tCadd");
+			System.out.println(cno+"\t"+cname+"\t"+contact+"\t"+cadd);
+			
+		}
+		else 
+		{
+			System.out.println("Not Found...");
+		}	  
+
+	}
+
+}
