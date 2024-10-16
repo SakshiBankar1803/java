@@ -1,0 +1,84 @@
+/*Create an abstract class “order” having members id, description. Create two subclasses  
+“Purchase Order” and “Sales Order” having members customer name and Vendor name     
+respectively. Define methods accept and display in all cases. Create 3 objects each of Purchase  
+Order and Sales Order and accept and display details.*/
+
+/*Create an abstract class “order” having members id, description. Create two subclasses  
+“Purchase Order” and “Sales Order” having members customer name and Vendor name     
+respectively. Define methods accept and display in all cases. Create 3 objects each of Purchase  
+Order and Sales Order and accept and display details.*/
+import java.util.*;
+abstract class orderr
+{
+	int id;
+	String des;
+	abstract void accept();
+	abstract void disp();
+}
+
+class porder extends orderr
+{
+	String cname;
+	void accept()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter id cname and description::");
+		id=sc.nextInt();
+		cname=sc.next();
+		des=sc.next();
+	}
+	void disp()
+	{
+		System.out.println("customer id="+id);
+		System.out.println("customer name="+cname);
+		System.out.println("customer description="+des);
+	}
+}
+class sorder extends orderr
+{
+	String vname;
+	public void accept()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter vendor id name and description::");
+		id=sc.nextInt();
+		vname=sc.next();
+		des=sc.next();
+	}
+	void disp()
+	{
+		System.out.println("vendor id="+id);
+		System.out.println("vendor name="+vname);
+		System.out.println("vendor description="+des);
+	}
+}
+public class order
+{
+
+	public static void main(String[] args)
+	{
+		porder ob1=new porder();
+		porder ob2=new porder();
+		porder ob3=new porder();
+		 
+		ob1.accept();
+		ob2.accept();
+		ob3.accept();
+		ob1.disp();
+		ob2.disp();
+		ob3.disp();
+		
+		sorder ob4=new sorder();
+		sorder ob5=new sorder();
+		sorder ob6=new sorder();
+		
+		ob4.accept();
+		ob5.accept();
+		ob6.accept();
+		ob4.disp();
+		ob5.disp();
+		ob6.disp();
+		
+	}
+
+}
