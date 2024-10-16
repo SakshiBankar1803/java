@@ -1,0 +1,45 @@
+//Write a program which shows the combo box which includes list of  T.Y.B.Sc.(Comp. Sci) subjects. Display the selected subject in a text field.
+
+
+import java.awt.*;
+import java.awt.event.*;
+class item extends Frame implements ItemListener
+{
+	TextField t1;
+	Choice c1;
+	item()
+	{
+		setVisible(true);
+		setSize(500,500);
+		setLayout(new FlowLayout());
+		
+		c1=new Choice();
+		c1.add("c++");
+		c1.add("java");
+		c1.add("php");
+		c1.add("javascript");
+		t1=new TextField(30);
+		add(c1);
+		add(t1);
+		c1.addItemListener(this);
+	}
+	public void itemStateChanged(ItemEvent ie)
+	{
+		if(ie.getSource()==c1)
+		{
+			String s=c1.getSelectedItem();
+			t1.setText(s);
+		}
+	}
+}
+public class combodemo 
+{
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		new item();
+
+	}
+
+}
