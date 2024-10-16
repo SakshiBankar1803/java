@@ -1,0 +1,31 @@
+/*Define an interface “Operation” which has method volume( ).Define a constant PI having a value 
+3.142 Create a class cylinder which implements this interface (members – radius, height). Create 
+one object and calculate the volume*/
+
+/* Define an interface “Operation” which has method volume( ).Define a constant PI having a value 
+3.142 Create a class cylinder which implements this interface (members – radius, height). Create 
+one object and calculate the volume. */
+import java.util.*;
+interface operation
+{
+	void volume(float r,float h);
+	float PI=3.14f;
+}
+class cylinder implements operation
+{
+	public void volume(float r,float h)
+	{
+		float v=PI*r*r*h;
+		System.out.println("volume of cylinder="+v);
+	}
+}
+public class slip11 
+{
+	public static void main(String[] args) 
+	{
+		cylinder ob=new cylinder();
+		ob.volume(3.4f,6.7f);
+
+	}
+
+}
