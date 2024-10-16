@@ -1,0 +1,22 @@
+// Write a program to find the cube of given number using functional interface. 
+
+// Write a program to find the cube of given number using functional interface.
+interface cube
+{
+	void cal_cube(int n);
+}
+public class slip10 implements cube
+{
+	public void cal_cube(int n)
+	{
+		int ans=n*n*n;
+		System.out.println("cube of give number is="+ans);
+	}
+
+	public static void main(String[] args)
+	{
+		slip10 ob=new slip10();
+		ob.cal_cube(10);
+	}
+
+}
