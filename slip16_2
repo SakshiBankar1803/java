@@ -1,0 +1,45 @@
+//Write a program to design a screen using Awt that, 
+
+import javax.swing.*;
+import java.awt.*;
+public class awtdemo 
+{ JMenu File;
+  JMenu Edit;
+  JMenu About;
+  JMenuItem i1,i2,i3,i4,i5;
+  awtdemo()
+  {
+	  JFrame f=new JFrame();
+	  //("menu and menu examples");
+	  JMenuBar mb=new JMenuBar();
+	  File=new JMenu("File");
+	  Edit=new JMenu("Edit");
+	  About=new JMenu("about");
+	  i1=new JMenuItem("New ctrl+N");
+	  i2=new JMenuItem("open");
+	  i3=new JMenuItem("save");
+	  i4=new JMenuItem("show about");
+	  i5=new JMenuItem("exit");
+	  File.add(i1);
+	  File.add(i2);
+	  File.add(i3);
+	  File.add(i4);
+	  File.add(i5);
+	  mb.add(File);
+	  mb.add(Edit);
+	  mb.add(About);
+	  f.setJMenuBar(mb);
+	  f.setSize(400,400);;
+	  f.setVisible(true);
+	  f.setLayout(null);
+	  
+  }
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+       new awtdemo();
+	}
+
+}
+
